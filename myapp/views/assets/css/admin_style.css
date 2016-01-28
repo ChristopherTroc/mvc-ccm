@@ -3,7 +3,7 @@ body {
 /* background:url("http://localhost/mvc-taskforce/myapp/views/assets/images/grey_wash_wall.png"); */
 /* background:url("http://localhost/mvc-taskforce/myapp/views/assets/images/stardust.png"); */
 /* background:url("http://localhost/mvc-taskforce/myapp/views/assets/images/grunge_wall.png");*/
-background:url("http://taskforce.visualiza.cat/myapp/views/assets/images/crossword.png");
+/*background:url("http://taskforce.visualiza.cat/myapp/views/assets/images/crossword.png"); */
 }
 
 @font-face {
@@ -296,18 +296,18 @@ color:#636363;
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
 color: #FFF;
-background-color: #97bf04;
+background-color: #F89f10;
 border-color: transparent;
 }
 
 .btn-primary {
 color: #FFF;
-background-color:#abDc38;
+background-color:#e89f10;
 border-color: transparent;
 }
 
 .white { color:#FFF !important; }
-.green { color:#94be00 !important; }
+.green { color:##e89f10 !important; }
 
 
 .conditions {
@@ -383,7 +383,7 @@ margin-left: 0;
 
 .bs-glyphicons li:hover {
 color: #fff;
-background-color: #94be09;
+background-color: #e89f10;
 }
 
 .bs-glyphicons ul a{
