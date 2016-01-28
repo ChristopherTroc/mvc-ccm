@@ -63,6 +63,28 @@
 <!-- works -->
 
 
+
+<!-- About Starts -->
+<div class="highlight-info spacer">
+    <div class="overlay spacer">
+        <div class="container">
+            <div class="row text-center  wowload fadeInDownBig">
+	              <div class="col-sm-4 col-xs-6">
+	                  <i class="fa fa-smile-o  fa-5x"></i><h4>24 Clientes</h4>
+	              </div>
+	              <div class="col-sm-4 col-xs-6">
+	                  <i class="fa fa-rocket  fa-5x"></i><h4>75 Proyectos</h4>
+	              </div>
+	              <div class="col-sm-4 col-xs-6">
+	                  <i class="fa fa-map-marker fa-5x"></i><h4>2 Officina</h4>
+	              </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About Ends -->
+
+
 <div id="contact" class="spacer">
 <!--Contact Starts-->
 <div class="container contactform center">
@@ -79,6 +101,8 @@
 </div>
 <!--Contact Ends-->
 </div>
+
+
 
 
 
