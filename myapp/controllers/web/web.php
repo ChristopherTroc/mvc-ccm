@@ -11,10 +11,8 @@ class Web_Controller extends TinyMVC_Controller{
 
     
 
-    $this->view->assign('stylesheets',array($this->helpers->load_css('web_default')));
-    $this->view->assign('footer_js',  array($this->helpers->load_javascript('web_default'),
-                                            $this->helpers->load_javascript('validation'), 
-                                            $this->helpers->load_javascript('contactMe')));
+    $this->view->assign('stylesheets',array($this->helpers->load_css('web_default'), ));
+    $this->view->assign('footer_js',  array($this->helpers->load_javascript('web_default')));
 
     $this->view->assign('title','CCM fotografia');
     $this->view->assign('keywords', $web[key_words]);
@@ -48,10 +46,9 @@ class Web_Controller extends TinyMVC_Controller{
     // Check for empty fields
     if(empty($_POST['name'])    ||
        empty($_POST['email'])   ||
-       empty($_POST['message']) ||
-       !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
+       empty($_POST['message'])) 
     {
-      echo "No arguments Provided!";
+      echo "Campos incorrectos !!!";
       return false;
     }
 
@@ -62,7 +59,7 @@ class Web_Controller extends TinyMVC_Controller{
     $message = $_POST['message'];
     
     // Create the email
-    $to = 'tierradeisis@gmail.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
+    $to = 'christopher.troc@gmail.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
     $email_subject = "Mensaje desde CCM fotografia Web";
     $email_body = "Has recibido un nuevo menssaje desde tu sitio web.\n\nNombre: $name\n\nEmail: $email_address\n\nMensage:\n$message";
     
@@ -89,6 +86,7 @@ class Web_Controller extends TinyMVC_Controller{
     exit;
     }
     
+    echo "1"; 
     return true;			
     
   }

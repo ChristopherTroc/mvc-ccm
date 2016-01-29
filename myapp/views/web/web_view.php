@@ -7,7 +7,7 @@
             <div class="container">
                 <div class="navbar-header">
                     <!-- Logo Starts -->
-                    <a class="navbar-brand" href="#home"><img src="<?$helper->urldispatch('images')?>logo.png" alt="logo"></a>
+                    <a class="navbar-brand" href="<?$helper->urldispatch(inicio)?>"><img src="<?$helper->urldispatch('images')?>logo.png" alt="logo"></a>
                     <!-- #Logo Ends -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -42,6 +42,7 @@
 
 <!-- works -->
 <div id="works"  class="clearfix grid"> 
+  <h2 class="text-center  wowload fadeInUp">Albumes</h2>
   <?foreach($categorys as $category): ?>
   <figure class="effect-oscar  wowload fadeInUp">
     <?if($category[img]){?>
@@ -90,11 +91,14 @@
 <div class="container contactform center">
     <h2 class="text-center  wowload fadeInUp">Contactame para iniciar tu proyecto</h2>
         <div class="row wowload fadeInLeftBig">      
-            <div class="col-sm-6 col-sm-offset-3 col-xs-12">      
-                <input type="text" placeholder="Nombre">
-                <input type="text" placeholder="Asunto">
-                <textarea rows="5" placeholder="Mensaje"></textarea>
-                <button class="btn btn-primary"><i class="fa fa-paper-plane"></i> Enviar</button>
+            <div class="col-sm-6 col-sm-offset-3 col-xs-12">     
+                <form name="sentMessage" id="contactForm" > 
+                    <input type="text" placeholder="Nombre"  id="name" >
+                    <input type="text" placeholder="E-mail"  id="email" >
+                    <textarea rows="5" placeholder="Mensaje" id="message"></textarea>
+                    <div id="response" ></div>
+                    <button id="submit" class="btn btn-primary" ><i class="fa fa-paper-plane"></i> Enviar</button>
+                </form>
             </div>
         </div>
     </div>
@@ -114,7 +118,7 @@
          <a href="#"><i class="fa fa-twitter fa-2x"></i></a> 
         <a href="#"><i class="fa fa-flickr fa-2x"></i></a> 
      </p>
-     Desarrollado por <a href="http://www.ctroc.com">www.ctroc.com</a>
+     Desarrollado por <a href="http://www.ctroc.com">www.c-troc.com</a>
 </div>
 <!-- # Footer Ends -->
 

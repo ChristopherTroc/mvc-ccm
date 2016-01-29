@@ -20,7 +20,7 @@
                 
                 <!-- Nav Starts -->
                 <div class="navbar-collapse  collapse">
-                    <ul class="nav navbar-nav navbar-right scroll">
+                    <ul class="nav navbar-nav navbar-right ">
                       <li class="active"><a href="<?=$helper->urldispatch(index)?>">Inicio</a></li>
                     </ul>
                 </div>
@@ -36,8 +36,11 @@
 
     <!-- Album -->
     <div class="container center">
-    <?foreach($articles AS $article):?>
-        <div class="col-sm-8 col-sm-offset-2 col-xs-12 spacer">
+    <?$count = 1; foreach($articles AS $article):?>
+      <div class="col-sm-8 col-sm-offset-2 col-xs-12 spacer">
+        <?if($count == 1){?>
+        <h2 class="text-center  wowload fadeInUp"><?=$category[category]?></h2>
+        <?}?>
         <?if($article[img]){?>
           <img src="<?$helper->urldispatch(files)?><?=$category[category]?>/<?=$article[img]?>" class="img-responsive" />
         <?}else{?>
@@ -45,8 +48,8 @@
               <iframe class="embed-responsive-item" src="<?=$article[url]?>"></iframe>
           </div>
         <?}?>
-        </div>
-    <?endforeach;?>
+      </div>
+    <? $count++; endforeach;?>
     </div>
     <!-- End Album Item -->
 
@@ -65,3 +68,7 @@
     <a href="#home" class="gototop"><i class="fa fa-angle-up  fa-3x"></i></a>
 
 </div>
+
+<?foreach($footer_js as $js):?>
+<?=$js?>
+<?endforeach?>
