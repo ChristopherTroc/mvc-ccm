@@ -113,12 +113,15 @@
 <!-- Footer Starts -->
 <div class="footer text-center spacer">
      <p class="wowload flipInX">
-         <a href="#"><i class="fa fa-facebook fa-2x"></i></a> 
-         <a href="#"><i class="fa fa-instagram fa-2x"></i></a> 
+         <a href="<?=$web[link_facebook]?>"><i class="fa fa-facebook fa-2x"></i></a> 
+         <a href="<?=$web[link_instagram]?>"><i class="fa fa-instagram fa-2x"></i></a> 
+         <!--
          <a href="#"><i class="fa fa-twitter fa-2x"></i></a> 
-        <a href="#"><i class="fa fa-flickr fa-2x"></i></a> 
+         <a href="#"><i class="fa fa-flickr fa-2x"></i></a> 
+         -->
      </p>
-     Desarrollado por <a href="http://www.ctroc.com">www.c-troc.com</a>
+     <strong><?=$web[footer]?></strong>
+     <br/><br/>Copyright © CCM Photo 2016 Developed by:<a href="http://www.ctroc.com">www.c-troc.com</a>
 </div>
 <!-- # Footer Ends -->
 

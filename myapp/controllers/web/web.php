@@ -7,7 +7,7 @@ class Web_Controller extends TinyMVC_Controller{
     $categorys = $this->model_articles->getCategoriesFront();
     $web          = $this->model_articles->getWeb();
 
-    $about = $this->order_about($web[aboutme]);
+    //$about = $this->order_about($web[aboutme]);
 
     
 
