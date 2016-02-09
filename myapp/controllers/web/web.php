@@ -98,6 +98,7 @@ class Web_Controller extends TinyMVC_Controller{
 
     $category = $this->model_articles->getSingleCategory($_GET[id]);
     $articles = $this->model_articles->getArticles($_GET[id]);
+    $web          = $this->model_articles->getWeb();
 
     $this->view->assign('stylesheets',array($this->helpers->load_css('web_default')));
     $this->view->assign('footer_js',  array($this->helpers->load_javascript('web_default')));
@@ -107,6 +108,7 @@ class Web_Controller extends TinyMVC_Controller{
     //$this->view->assign('keywords', "");
     $this->view->assign('category', $category);
     $this->view->assign('articles',  $articles);
+    $this->view->assign('web', $web);
     $this->view->assign('helper',$this->helpers);
     $this->view->display('header');
     $this->view->display('album_view');
