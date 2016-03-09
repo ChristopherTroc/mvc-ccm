@@ -44,7 +44,7 @@ class Users_Model extends TinyMVC_Model {
     $query =  $this->db->insert('users_login', array('login'=>$user_email,'password'=>$pass_db, 'user_level' => $user_level, 'activation_key' => $activation_key) );
     
     if($query) return array("id"         => $this->db->last_insert_id(),
-                            "user_login" => $user_email,
+                            "login" => $user_email,
                             "pass"       => $pass,
                             "key"        => $activation_key
                            );
