@@ -9,8 +9,8 @@ class TinyMVC_Library_Helpers {
     //set routes
    $this->server_name = $_SERVER['SERVER_NAME'];
    $this->folder_name = "mvc-ccm";
-   $this->base_url = "http://$this->server_name/$this->folder_name";
-   //$this->base_url = "http://$this->server_name";
+   //$this->base_url = "http://$this->server_name/$this->folder_name";
+   $this->base_url = "http://$this->server_name";
   
 
   }
@@ -173,7 +173,7 @@ class TinyMVC_Library_Helpers {
     //$mail->Username = 'christopher.troc@gmail.com';
     //$mail->Password = 'a1s2d3f4h10';
     //$mail->From = 'christopher.troc@gmail.com';
-    $mail->FromName = 'Tierra de Isis.';
+    $mail->FromName = 'CCM Photo.';
     $mail->addAddress($info[email]);  // Add a recipient
     $mail->isHTML(true);                    // Set email format to HTML
     $mail->Subject = "$info[subject]";
@@ -200,7 +200,7 @@ class TinyMVC_Library_Helpers {
           <div align="left" style="width:720px">
             <table align="left" width="720" border="0" style="margin-top:10px;">
               <tr>
-                <td style="background-color:#D0D0DA; color:white; padding:5px;"><strong>Bienvenido a Tierra de Isis Web</strong></td>
+                <td style="background-color:#D0D0DA; color:white; padding:5px;"><strong>Bienvenido a CCM Photo </strong></td>
               </tr>
             </table>
             <table align="left" width="400" border="0" cellspacing="3" cellpadding="3" style="margin-top:10px;">
@@ -223,7 +223,7 @@ class TinyMVC_Library_Helpers {
         </body>
       </html>';
 
-    $info = array('email' => $user[login], 'subject' => 'Bienvenido a Tierra de Isis Web', 'email_body' => $email_body);
+    $info = array('email' => $user[login], 'subject' => 'Bienvenido a CCM photo', 'email_body' => $email_body);
     $this->mailer($info);
     return;
   }
@@ -239,7 +239,7 @@ class TinyMVC_Library_Helpers {
           <div align="left" style="width:720px">
             <table align="left" width="720" border="0" style="margin-top:10px;">
               <tr>
-                <td style="background-color:#D0D0DA; color:white; padding:5px;"><strong>Recuperación de password, Tierra de Isis Web.</strong></td>
+                <td style="background-color:#D0D0DA; color:white; padding:5px;"><strong>Recuperación de password, CCM Photo.</strong></td>
               </tr>
             </table>
             <table align="left" width="720" border="0" style="margin-top:15px;">
@@ -250,14 +250,16 @@ class TinyMVC_Library_Helpers {
                 </td>
               </tr>
               <tr>
-                <td>En caso que no hallas solicitado la recuperación de password, omita este email. y notifique este situación a <a href="mailto:tierradeisis@gmail.com" >tierradeisis@gmail.com</a></td>
+                <td>En caso que no hallas solicitado la recuperación de password, omita este email. y notifique este situación a 
+                    <a href="mailto:cristobalcornejomaturana@gmail.com" >cristobalcornejomaturana@gmail.com</a>
+                </td>
               </tr>
             </table>
           </div>
         </body>
       </html>';
 
-    $info = array('email' => $user[login], 'subject' => 'Recuperacion de password, Tierra de Isis Web', 'email_body' => $email_body);
+    $info = array('email' => $user[login], 'subject' => 'Recuperacion de password, CCM Photo', 'email_body' => $email_body);
     $this->mailer($info);
     return;
 
@@ -274,7 +276,7 @@ class TinyMVC_Library_Helpers {
           <div align="left" style="width:720px">
             <table align="left" width="720" border="0" style="margin-top:10px;">
               <tr>
-                <td style="background-color:#D0D0DA; color:white; padding:5px;"><strong>Tu nuevo password, Tierra de Isis Web.</strong></td>
+                <td style="background-color:#D0D0DA; color:white; padding:5px;"><strong>Tu nuevo password, CCM Photo.</strong></td>
               </tr>
             </table>
             <table align="left" width="720" border="0" style="margin-top:15px;">
@@ -288,7 +290,7 @@ class TinyMVC_Library_Helpers {
         </body>
       </html>';
 
-    $info = array('email' => $user[login], 'subject' => 'Tu nuevo password, Tierra de Isis Web', 'email_body' => $email_body);
+    $info = array('email' => $user[login], 'subject' => 'Tu nuevo password, CCM Photo', 'email_body' => $email_body);
     $this->mailer($info);
     return;
 
@@ -303,7 +305,6 @@ class TinyMVC_Library_Helpers {
   function check_extension($name_file, $extensions = array('.jpg', '.pdf', '.doc', '.docx')){
     $ext = $this->get_extencion_file($name_file);
      if(!in_array($ext,$extensions)){
-         echo "Here"; exit;
          return false;
       }
       

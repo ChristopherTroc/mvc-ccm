@@ -135,3 +135,13 @@
 <?foreach($footer_js as $js):?>
 <?=$js?>
 <?endforeach?>
+<script>
+$(document).ready(function(){
+   setTimeout(function(){
+        $('html, body').animate({
+                scrollTop: $("#works").offset().top
+            }, 1000);
+     }, 2000);
+ });
+</script>
+

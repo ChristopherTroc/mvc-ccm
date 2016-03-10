@@ -19,7 +19,8 @@ class Articles_Model extends TinyMVC_Model {
   function getCategoriesFront(){
     $query = "SELECT a.*, b.img, b.url 
               FROM categories as a 
-              JOIN articles as b ON (a.idFront = b.id)";
+              JOIN articles as b ON (a.idFront = b.id)
+              ORDER BY a.id DESC";
 
     return $this->db->query_all($query);
   }

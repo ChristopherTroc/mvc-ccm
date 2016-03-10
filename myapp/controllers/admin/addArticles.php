@@ -56,7 +56,7 @@ class AddArticles_Controller extends TinyMVC_Controller {
 
     //Validate
     if(!$article OR !$article[category_id] OR (!$article[img] AND !$article[url]) ) return false;
-    if(!$article[url] AND !$this->helpers->check_extension($article[img], array('.jpg','.jpeg', '.png'))) return false;
+    if(!$article[url] AND !$this->helpers->check_extension($article[img], array('.jpg','.jpeg','.JPG', '.png'))) return false;
      
     //call model
     $this->load->model("Articles_Model","model_articles");

@@ -158,7 +158,7 @@ class UpdateArticles_Controller extends TinyMVC_Controller {
      
     //Save image process
     if($article[img] AND $article[img] != ""):
-      if(!$this->helpers->check_extension($article[img], array('.jpg','.jpeg', '.png'))) exit;
+      if(!$this->helpers->check_extension($article[img], array('.jpg','.jpeg','.JPG', '.png'))) exit;
       $this->update_image_process($article,$old_article);
     endif;
   
