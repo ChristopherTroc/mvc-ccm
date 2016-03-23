@@ -4,14 +4,9 @@ class Web_Controller extends TinyMVC_Controller{
   function Index(){
 
     //Logic for animation javascript scroll to
-    session_start();   
-    if($_SESSION['firstime']){
-        $scrollTo = false;
-    } else {
-        session_start();
-        $_SESSION['firstime'] = true;
-        $scrollTo = true;
-    }
+    session_start(); 
+    if($_SESSION['firstime']){$scrollTo=false;}else{$scrollTo=true;}
+    session_destroy();
 
     $this->load->model('Articles_Model','model_articles');
     $categorys = $this->model_articles->getCategoriesFront();
@@ -21,7 +16,7 @@ class Web_Controller extends TinyMVC_Controller{
 
     
 
-    $this->view->assign('stylesheets',array($this->helpers->load_css('web_default'), ));
+    $this->view->assign('stylesheets',array($this->helpers->load_css('web_default')));
     $this->view->assign('footer_js',  array($this->helpers->load_javascript('web_default')));
 
     $this->view->assign('title','CCM fotografia');
@@ -103,6 +98,9 @@ class Web_Controller extends TinyMVC_Controller{
   }
 
   function viewAlbum(){
+    //Logic scroll to
+    session_start(); $_SESSION['firstime']=true;
+
     if(!$_GET[id]){ $this->Index(); return; }
 
     $this->load->model('Articles_Model','model_articles');
