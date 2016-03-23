@@ -6,7 +6,6 @@ class Web_Controller extends TinyMVC_Controller{
     //Logic for animation javascript scroll to
     session_start();   
     if($_SESSION['firstime']){
-        session_destroy();
         $scrollTo = false;
     } else {
         session_start();
