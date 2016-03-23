@@ -76,9 +76,6 @@
 	              <div class="col-sm-4 col-xs-6">
 	                  <i class="fa fa-rocket  fa-5x"></i><h4>75 Proyectos</h4>
 	              </div>
-	              <div class="col-sm-4 col-xs-6">
-	                  <i class="fa fa-map-marker fa-5x"></i><h4>2 Officina</h4>
-	              </div>
             </div>
         </div>
     </div>
@@ -135,6 +132,8 @@
 <?foreach($footer_js as $js):?>
 <?=$js?>
 <?endforeach?>
+
+<?if($_SESSION['firstime']):?>
 <script>
 $(document).ready(function(){
    setTimeout(function(){
@@ -144,4 +143,5 @@ $(document).ready(function(){
      }, 2000);
  });
 </script>
+<?endif;?>
 

@@ -3,6 +3,14 @@ class Web_Controller extends TinyMVC_Controller{
   
   function Index(){
 
+    //Logic for animation javascript scroll to
+    if(!$_SESSION['firstime']){
+        session_start();
+        $_SESSION['firstime'] = true;
+      } else {
+        session_destroy();
+      }
+
     $this->load->model('Articles_Model','model_articles');
     $categorys = $this->model_articles->getCategoriesFront();
     $web          = $this->model_articles->getWeb();
