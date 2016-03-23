@@ -4,12 +4,15 @@ class Web_Controller extends TinyMVC_Controller{
   function Index(){
 
     //Logic for animation javascript scroll to
-    if(!$_SESSION['firstime']){
+    session_start();   
+    if($_SESSION['firstime']){
+        session_destroy();
+        $scrollTo = false;
+    } else {
         session_start();
         $_SESSION['firstime'] = true;
-      } else {
-        session_destroy();
-      }
+        $scrollTo = true;
+    }
 
     $this->load->model('Articles_Model','model_articles');
     $categorys = $this->model_articles->getCategoriesFront();
@@ -27,6 +30,7 @@ class Web_Controller extends TinyMVC_Controller{
     $this->view->assign('categorys', $categorys);
     $this->view->assign('about', $about);
     $this->view->assign('web', $web);
+    $this->view->assign('scrollTo', $scrollTo);
     $this->view->assign('helper',$this->helpers);
     $this->view->display('header');
     $this->view->display('web_view');

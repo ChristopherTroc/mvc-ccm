@@ -133,7 +133,7 @@
 <?=$js?>
 <?endforeach?>
 
-<?if($_SESSION['firstime']):?>
+<?if($scrollTo):?>
 <script>
 $(document).ready(function(){
    setTimeout(function(){
