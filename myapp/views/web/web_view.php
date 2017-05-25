@@ -118,7 +118,6 @@
          -->
      </p>
      <strong><?=$web[footer]?></strong>
-     <br/><br/>Copyright © CCM Photo 2016 Developed by:<a target="blank" href="http://www.c-troc.com">www.c-troc.com</a>
 </div>
 <!-- # Footer Ends -->
 
