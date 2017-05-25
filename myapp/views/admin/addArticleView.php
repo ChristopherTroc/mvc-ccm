@@ -1,4 +1,4 @@
-<!-- add Article View -->
+<!-- add  Article View -->
 <div class="container m-top-20">
 
   <div class="col-lg-12 row"> 
