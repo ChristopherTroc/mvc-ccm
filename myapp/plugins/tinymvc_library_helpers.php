@@ -9,8 +9,8 @@ class TinyMVC_Library_Helpers {
     //set routes
    $this->server_name = $_SERVER['SERVER_NAME'];
    $this->folder_name = "mvc-ccm";
-   //$this->base_url = "http://$this->server_name/$this->folder_name";
-   $this->base_url = "http://$this->server_name";
+   $this->base_url = "http://$this->server_name/$this->folder_name";
+   //$this->base_url = "http://$this->server_name";
   
 
   }
@@ -318,7 +318,7 @@ class TinyMVC_Library_Helpers {
   }
 
   function clean_spaces($string){
-    $clean = ereg_replace( "([ ]+)", "", $string );
+    $clean = preg_replace( "([ ]+)", "", $string );
     return $clean;
   }
     
