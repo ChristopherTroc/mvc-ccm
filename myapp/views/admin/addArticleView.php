@@ -47,7 +47,7 @@
           <div class="form-group">
             <label class="control-label col-lg-3">Fecha: </label>
             <div class="col-lg-8">
-              <input type="text" name="date" id="date" placeholder="por ejemplo: 2014" class="form-control"   />
+              <input type="date" name="date" id="date" placeholder="por ejemplo: 2014" class="form-control"   />
             </div>
           </div>
 
